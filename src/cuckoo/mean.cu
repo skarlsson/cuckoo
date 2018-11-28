@@ -524,7 +524,7 @@ int nonce_cmp(const void *a, const void *b) {
   return *(u32 *)a - *(u32 *)b;
 }
 
-const static u32 MAXEDGES = 0x20000;
+const static u32 MAXEDGES = 0x200000;
 
 struct solver_ctx {
   edgetrimmer *trimmer;
