@@ -602,7 +602,8 @@ struct solver_ctx {
         const u32 min = nu < nv ? nu : nv;
         for (nu -= min, nv -= min; us[nu] != vs[nv]; nu++, nv++) ;
         const u32 len = nu + nv + 1;
-        printf("%4d-cycle found\n", len);
+        if (len>2)
+          printf("%4d-cycle found\n", len);
         if (len == PROOFSIZE)
           solution(us, nu, vs, nv);
         // if (len == 2) printf("edge %x %x\n", edge.x, edge.y);
